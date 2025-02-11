@@ -1,75 +1,62 @@
 import React from 'react';
-import { Users, Award, Calendar } from 'lucide-react';
+import { Users, Award, Calendar, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function About() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-[#0066FF] to-[#0044AA] py-16">
-        <div className="container mx-auto px-4">
+      <div className="relative bg-gradient-to-br from-[#0066FF] to-[#0044AA] py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] opacity-10 bg-cover bg-center" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0066FF]/90 to-[#0044AA]/90" />
+        <div className="container relative mx-auto px-6">
           <div className="text-center text-white">
-            <h1 className="text-4xl font-bold mb-4">About Us</h1>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              We're a team of passionate developers, designers, and digital craftsmen dedicated to creating exceptional web experiences.
+            <h1 className="text-5xl font-bold mb-6">Our Story</h1>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+              We're a team of passionate developers, designers, and digital craftsmen dedicated to creating exceptional web experiences that make a difference.
             </p>
           </div>
         </div>
       </div>
 
       {/* Stats Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-24">
-          <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-            <Users className="w-12 h-12 text-[#0066FF] mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">500+</h3>
-            <p className="text-gray-600">Happy Clients</p>
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-16">
+          <div className="bg-white p-10 rounded-2xl shadow-xl shadow-blue-500/5 transform hover:-translate-y-1 transition-all duration-300">
+            <Users className="w-16 h-16 text-[#0066FF] mb-6" />
+            <h3 className="text-4xl font-bold mb-2">500+</h3>
+            <p className="text-gray-600 text-lg">Happy Clients</p>
           </div>
-          <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-            <Award className="w-12 h-12 text-[#0066FF] mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">50+</h3>
-            <p className="text-gray-600">Awards Won</p>
+          <div className="bg-white p-10 rounded-2xl shadow-xl shadow-blue-500/5 transform hover:-translate-y-1 transition-all duration-300">
+            <Award className="w-16 h-16 text-[#0066FF] mb-6" />
+            <h3 className="text-4xl font-bold mb-2">50+</h3>
+            <p className="text-gray-600 text-lg">Awards Won</p>
           </div>
-          <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-            <Calendar className="w-12 h-12 text-[#0066FF] mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-2">10+</h3>
-            <p className="text-gray-600">Years Experience</p>
+          <div className="bg-white p-10 rounded-2xl shadow-xl shadow-blue-500/5 transform hover:-translate-y-1 transition-all duration-300">
+            <Calendar className="w-16 h-16 text-[#0066FF] mb-6" />
+            <h3 className="text-4xl font-bold mb-2">10+</h3>
+            <p className="text-gray-600 text-lg">Years Experience</p>
           </div>
         </div>
       </div>
 
-      {/* Team Section */}
-      <div className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Leadership Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              name: 'John Smith',
-              role: 'CEO & Founder',
-              image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80'
-            },
-            {
-              name: 'Sarah Johnson',
-              role: 'Technical Director',
-              image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80'
-            },
-            {
-              name: 'Michael Chen',
-              role: 'Creative Director',
-              image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80'
-            }
-          ].map((member, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                <p className="text-gray-600">{member.role}</p>
-              </div>
-            </div>
-          ))}
+      {/* CTA Section */}
+      <div className="container mx-auto px-6 pb-32">
+        <div className="relative bg-[#001933] rounded-3xl p-16 text-center overflow-hidden">
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] opacity-5 bg-cover bg-center" />
+          <div className="relative">
+            <h2 className="text-4xl font-bold text-white mb-6">Join Our Journey</h2>
+            <p className="text-xl text-blue-200 mb-12 max-w-2xl mx-auto leading-relaxed">
+              Be part of our story and let's create something amazing together.
+            </p>
+            <Link
+              to="/contact"
+              className="group inline-flex items-center space-x-2 px-8 py-4 bg-[#0066FF] text-white rounded-xl font-semibold hover:bg-[#0055DD] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/25"
+            >
+              <span>Get Started</span>
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

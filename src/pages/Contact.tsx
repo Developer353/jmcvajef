@@ -47,22 +47,28 @@ export default function Contact() {
                 <MapPin className="w-6 h-6 text-[#0066FF]" />
                 <div>
                   <h3 className="font-semibold">Our Location</h3>
-                  <p className="text-gray-600">123 Tech Street, Silicon Valley, CA 94025</p>
+                  <p className="text-gray-600">54A Sewardstone Road, E4 7PR London</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <Phone className="w-6 h-6 text-[#0066FF]" />
                 <div>
                   <h3 className="font-semibold">Phone</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                  <p className="text-gray-600">+44 7305 127028</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <Mail className="w-6 h-6 text-[#0066FF]" />
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-gray-600">contact@techpro.com</p>
+                  <p className="text-gray-600">aagashrasalingam@gmail.com</p>
                 </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <a href="https://www.instagram.com/aagashr_" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-[#0066FF]">
+                  <span className="font-semibold">Instagram</span>
+                  <span className="text-gray-600">@aagashr_</span>
+                </a>
               </div>
             </div>
           </div>

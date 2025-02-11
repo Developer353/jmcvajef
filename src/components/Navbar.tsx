@@ -4,21 +4,24 @@ import { Zap } from 'lucide-react';
 
 export default function Navbar() {
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-    `px-4 py-2 rounded-full transition-all ${
+    `px-6 py-2.5 rounded-lg transition-all duration-300 ${
       isActive
-        ? 'bg-white text-[#0066FF] font-semibold'
-        : 'text-white hover:bg-white/10'
+        ? 'bg-white/95 text-[#0066FF] font-semibold shadow-lg shadow-blue-500/20'
+        : 'text-white/90 hover:text-white hover:bg-white/10 hover:scale-105'
     }`;
 
   return (
-    <nav className="bg-[#0066FF] shadow-lg">
-      <div className="container mx-auto px-4 py-4">
+    <nav className="bg-gradient-to-r from-[#0066FF] to-[#0055DD] backdrop-blur-lg shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
-          <NavLink to="/" className="flex items-center space-x-2 text-white">
-            <Zap size={24} />
-            <span className="font-bold text-xl">TechPro</span>
+          <NavLink 
+            to="/" 
+            className="flex items-center space-x-3 text-white group"
+          >
+            <Zap size={28} className="group-hover:rotate-12 transition-transform duration-300" />
+            <span className="font-bold text-2xl tracking-tight">TechPro</span>
           </NavLink>
-          <div className="flex space-x-4">
+          <div className="flex space-x-6">
             <NavLink to="/" className={navLinkClass}>Home</NavLink>
             <NavLink to="/about" className={navLinkClass}>About</NavLink>
             <NavLink to="/services" className={navLinkClass}>Services</NavLink>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Palette, Search, Settings, Server, Shield } from 'lucide-react';
+import { Code, Palette, Search, Settings } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Services() {
@@ -7,38 +7,42 @@ export default function Services() {
     {
       icon: <Code className="w-12 h-12" />,
       title: 'Web Development',
-      description: 'Custom web applications built with modern technologies and best practices.',
-      price: 'From $5,000'
+      description: 'Custom web applications built with modern technologies and best practices.'
     },
     {
       icon: <Palette className="w-12 h-12" />,
       title: 'UI/UX Design',
-      description: 'Beautiful, intuitive designs that enhance user experience.',
-      price: 'From $3,000'
+      description: 'Beautiful, intuitive designs that enhance user experience.'
     },
     {
       icon: <Search className="w-12 h-12" />,
       title: 'SEO Optimization',
-      description: 'Improve your search rankings and online visibility.',
-      price: 'From $1,500'
+      description: 'Improve your search rankings and online visibility.'
     },
     {
       icon: <Settings className="w-12 h-12" />,
       title: 'Maintenance',
-      description: 'Keep your website running smoothly with regular updates.',
-      price: 'From $500/mo'
+      description: 'Keep your website running smoothly with regular updates.'
     },
     {
-      icon: <Server className="w-12 h-12" />,
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure for your applications.',
-      price: 'From $2,000'
+      icon: <Palette className="w-12 h-12" />,
+      title: 'Website Design',
+      description: 'Design and develop stunning, responsive websites tailored to your brand.'
     },
     {
-      icon: <Shield className="w-12 h-12" />,
-      title: 'Security Audits',
-      description: 'Comprehensive security analysis and improvements.',
-      price: 'From $2,500'
+      icon: <Palette className="w-12 h-12" />,
+      title: 'Logo Design',
+      description: 'Creative and professional logos to represent your brand identity.'
+    },
+    {
+      icon: <Palette className="w-12 h-12" />,
+      title: 'Business Card Design',
+      description: 'Unique, visually appealing business cards that make a lasting impression.'
+    },
+    {
+      icon: <Palette className="w-12 h-12" />,
+      title: 'Social Media Management',
+      description: 'Boost your online presence with tailored social media strategies.'
     }
   ];
 
@@ -67,7 +71,6 @@ export default function Services() {
               <div className="text-[#0066FF] mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
               <p className="text-gray-600 mb-4">{service.description}</p>
-              <p className="text-[#0066FF] font-semibold">{service.price}</p>
             </div>
           ))}
         </div>
