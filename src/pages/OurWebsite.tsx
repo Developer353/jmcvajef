@@ -11,7 +11,7 @@ export default function OurWebsite() {
             <li>
               <a 
                 href="https://vblush.co.uk" 
-                className="text-[#0066FF] hover:text-white transition-all"
+                className="text-white hover:text-gray-300 transition-all text-lg font-medium"
                 target="_blank"
                 rel="noopener noreferrer"
               >
