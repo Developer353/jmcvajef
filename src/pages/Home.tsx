@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 function FeatureCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <div className="group p-8 rounded-2xl bg-white border border-gray-100 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1">
+    <div className="group p-6 md:p-8 rounded-2xl bg-white border border-gray-100 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1">
       <div className="text-[#0066FF] mb-6 group-hover:scale-110 transition-transform duration-300">{icon}</div>
-      <h3 className="text-2xl font-bold text-gray-800 mb-3">{title}</h3>
+      <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">{title}</h3>
       <p className="text-gray-600 leading-relaxed">{description}</p>
     </div>
   );
@@ -16,24 +16,24 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-[#0066FF] to-[#0044AA] py-32 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-[#0066FF] to-[#0044AA] py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] opacity-10 bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-br from-[#0066FF]/90 to-[#0044AA]/90" />
-        <div className="container relative mx-auto px-6">
-          <div className="flex flex-col items-center text-center text-white space-y-8">
-            <Zap size={64} className="text-white animate-pulse" />
-            <h1 className="text-6xl font-bold tracking-tight leading-tight max-w-4xl">
+        <div className="container relative mx-auto px-4 md:px-6">
+          <div className="flex flex-col items-center text-center text-white space-y-6 md:space-y-8">
+            <Zap size={48} className="text-white animate-pulse md:w-16 md:h-16" />
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight max-w-4xl">
               Transforming Ideas into
               <span className="block bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
                 Digital Excellence
               </span>
             </h1>
-            <p className="text-xl text-blue-100 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-blue-100 max-w-2xl leading-relaxed px-4">
               We combine cutting-edge technology with stunning design to create exceptional digital experiences that drive success.
             </p>
             <Link
               to="/contact"
-              className="group mt-8 px-8 py-4 bg-white text-[#0066FF] rounded-xl font-semibold hover:bg-opacity-95 transition-all duration-300 hover:shadow-xl hover:shadow-white/20 flex items-center space-x-2"
+              className="group mt-6 md:mt-8 px-6 md:px-8 py-3 md:py-4 bg-white text-[#0066FF] rounded-xl font-semibold hover:bg-opacity-95 transition-all duration-300 hover:shadow-xl hover:shadow-white/20 flex items-center space-x-2"
             >
               <span>Start Your Journey</span>
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -44,14 +44,14 @@ export default function Home() {
 
       {/* Features Section */}
       <div className="bg-gray-50">
-        <div className="container mx-auto px-6 py-32">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        <div className="container mx-auto px-4 md:px-6 py-20 md:py-32">
+          <div className="text-center mb-16 md:mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
               Experience the perfect blend of innovation, reliability, and performance
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <FeatureCard
               icon={<Code2 size={40} />}
               title="Modern Development"
@@ -72,17 +72,17 @@ export default function Home() {
       </div>
 
       {/* CTA Section */}
-      <div className="container mx-auto px-6 py-32">
-        <div className="relative bg-[#001933] rounded-3xl p-16 text-center overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 py-20 md:py-32">
+        <div className="relative bg-[#001933] rounded-3xl p-8 md:p-16 text-center overflow-hidden">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] opacity-5 bg-cover bg-center" />
           <div className="relative">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Digital Presence?</h2>
-            <p className="text-xl text-blue-200 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6">Ready to Transform Your Digital Presence?</h2>
+            <p className="text-lg md:text-xl text-blue-200 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed px-4">
               Join thousands of successful businesses that have chosen us for their digital journey.
             </p>
             <Link
               to="/contact"
-              className="group inline-flex items-center space-x-2 px-8 py-4 bg-[#0066FF] text-white rounded-xl font-semibold hover:bg-[#0055DD] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/25"
+              className="group inline-flex items-center space-x-2 px-6 md:px-8 py-3 md:py-4 bg-[#0066FF] text-white rounded-xl font-semibold hover:bg-[#0055DD] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/25"
             >
               <span>Let's Talk</span>
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />

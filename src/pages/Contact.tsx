@@ -11,7 +11,6 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
   };
 
@@ -25,11 +24,11 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-[#0066FF] to-[#0044AA] py-16">
-        <div className="container mx-auto px-4">
+      <div className="bg-gradient-to-br from-[#0066FF] to-[#0044AA] py-12 md:py-16">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="text-center text-white">
-            <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">Contact Us</h1>
+            <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto px-4">
               Get in touch with our team to discuss your next project
             </p>
           </div>
@@ -37,11 +36,11 @@ export default function Contact() {
       </div>
 
       {/* Contact Info & Form */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 -mt-24">
+      <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 -mt-16 md:-mt-24">
           {/* Contact Information */}
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
+          <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+            <h2 className="text-xl md:text-2xl font-bold mb-6">Get in Touch</h2>
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <MapPin className="w-6 h-6 text-[#0066FF]" />
@@ -74,8 +73,8 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
+          <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+            <h2 className="text-xl md:text-2xl font-bold mb-6">Send us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
