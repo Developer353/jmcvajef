@@ -21,7 +21,7 @@ export default function Navbar() {
             className="flex items-center space-x-3 text-white group"
           >
             <Zap size={28} className="group-hover:rotate-12 transition-transform duration-300" />
-            <span className="font-bold text-xl md:text-2xl tracking-tight">TechPro</span>
+            <span className="font-bold text-xl md:text-2xl tracking-tight">AR</span>
           </NavLink>
 
           {/* Mobile Menu Button */}
